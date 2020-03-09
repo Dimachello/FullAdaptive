@@ -1,0 +1,178 @@
+.SinglePostWrapper {
+    padding: 0.5rem;
+    background-image: linear-gradient(#360033, #0b8793 );
+}
+
+.Combine {
+    margin-bottom: 2rem;
+}
+
+.SinglePostContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0rem 1rem 2rem 1rem;
+      margin-bottom: 1rem;
+    box-shadow: 2px 3px 10px 2px #360033;
+    border-radius: 6px;
+    color: white;
+    font-family: 'Roboto';
+}
+
+.SinglePostContent > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.SinglePostContent > h3 {
+    margin-bottom: 1rem;
+    font-family: 'Kosugi';
+    text-transform: capitalize; 
+}
+
+.SinglePostContent > p {
+    font-size: 1rem;
+}
+
+.PostCommentsWrapper {
+    box-shadow: 2px 3px 10px 2px #360033;
+    border-radius: 6px;
+}
+
+.CrossWrapper {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.CrossContainer {
+    width: 10%;
+    padding: 0.5rem;
+    background-color: rgb(164, 191, 235);
+    border-radius: 6px;
+}
+
+.Cross {
+    display: block;
+    width: 90%;
+}
+
+.PostComments {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 100vh;
+    overflow: scroll;
+    padding: 1rem;
+    list-style: none;
+}
+
+.PostComments > li {
+    padding: 0.5rem 0rem; 
+    color: white;
+    font-family: 'Roboto';
+}
+
+.PostComments > li > h4 {
+    margin-bottom: 1rem;
+    font-family: 'Kosugi';
+    text-transform: capitalize; 
+    font-size: 1.2rem;
+}
+
+.RelevantWrapper > h2 {
+    margin-bottom: 1rem;
+    font-family: 'Kosugi';
+    color: white;
+}
+
+.Relevant {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 2px 3px 10px 2px #360033;
+    border-radius: 6px;
+}
+
+.Relevant > img {
+      flex-basis: 20%;
+    display: block;
+    margin: 0rem 1rem 0.5rem 0rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.Relevant > img:nth-last-child(-n + 4) {
+    margin: 0rem 1rem 0rem 0rem;
+}
+
+.Relevant > img:hover {
+    transform: scale(1.2);
+}
+
+@media(min-width: 768px) {
+    .SinglePostWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 5rem 1rem 1rem 1rem;
+    }
+
+    .Combine {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .SinglePostContent {
+        width: 55%; 
+        min-height: 100vh;
+        margin-bottom: 0rem;
+    }
+
+    .PostCommentsWrapper {
+        width: 40%;
+    }
+}
+
+@media(min-width: 1200px) {
+    /* .SinglePostWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 5rem 1rem 1rem 1rem;
+    } */
+
+    .Combine {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .SinglePostContent {
+        width: 40%; 
+        min-height: 100vh;
+        /* margin-bottom: 0rem; */
+    }
+
+    .PostCommentsWrapper {
+        width: 40%;
+    }
+
+    .Relevant > img {
+        flex-basis: 10%;
+      display: block;
+      margin: 0rem 1rem 0.5rem 0rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: transform .2s;
+  }
+}
+

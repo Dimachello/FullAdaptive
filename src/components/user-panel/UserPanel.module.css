@@ -1,0 +1,39 @@
+@media (min-width: 320px) {
+
+    .UserPanel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 0.3rem;
+        width: 50%;
+}
+
+    .ControlIcons {
+        width: 18%;
+        height: auto;
+}
+
+}
+
+@media (min-width: 768px) {
+
+    .UserPanel {
+        width: 30%;
+}
+
+    .ControlIcons {
+        width: 15%;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .UserPanel {
+        width: 20%;
+     }
+
+     .ControlIcons {
+         width: 12%;
+     }
+        
+}

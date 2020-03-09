@@ -1,0 +1,135 @@
+.LikedPostsWrapper {
+    padding-top: 2rem;
+    background-image: linear-gradient(#360033, #0b8793 );
+}
+
+.Categories {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: lightgray;
+    border-radius: 6px;
+    box-shadow: 2px 3px 10px 2px #360033;
+    font-family: 'Roboto';
+}
+
+.Categories > div {
+    flex-basis: 50%;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.Active {
+    background-color: gray;
+    color: white;
+}
+
+.LikedPostWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.PostContent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    color: white;
+    box-shadow: 2px 3px 10px 2px #360033;
+    border-radius: 6px;
+    font-family: 'Roboto';
+    overflow: hidden;
+}
+
+.Number {
+    display: none;
+}
+
+.PostPhoto {
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+.PostTitle {
+    text-transform: capitalize;
+    margin: 1rem 0rem;
+    font-family: 'Kosugi';
+}
+
+.ToolsWrapper {
+    display: none;
+}
+
+.DeleteLikedPost {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 1rem 0rem;
+    background-color: maroon;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.DeleteLikedPost > img {
+    display: block;
+    width: 6%;
+    margin: auto;
+}
+
+
+@media(min-width: 368px) {
+    .Categories {
+        width: 80%;
+        margin: auto;
+    }
+
+    .LikedPostWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 1rem 0.5rem;
+    }
+}
+
+@media(min-width: 768px) {
+
+    .LikedPostsWrapper {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+    }
+
+    .LikedPostsContent {
+        padding: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .Categories {
+         min-width: 40%; 
+         margin: 0rem auto 2rem auto;
+    }
+
+    .LikedPostWrapper {
+        flex-basis: 48%;
+        padding: 2rem 0rem;
+    }
+}
+
+@media(min-width: 1200px) {
+
+    .Categories {
+        max-width: 60%; 
+        margin: 0rem auto 2rem auto;
+    }
+}

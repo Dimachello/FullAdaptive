@@ -1,0 +1,136 @@
+.PostsWrapper {
+    padding-top: 1.5rem;
+    background-image: linear-gradient(#360033, #0b8793 );
+}
+
+.PostWrapper > div {
+    display: flex;
+}
+
+.SearchPanelWrapper {
+    position: relative;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.SearchPanel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    min-height: 3rem;
+    padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+    outline: 0px;
+    border-radius: 6px;
+    background: url(../../imgs/usr-panel/search24.png) no-repeat scroll 7px;
+    background-color: white;
+    font-size: 1.1rem;
+    color: black;
+}
+
+.SearchError {
+    width: 8rem;
+    position: absolute;
+    top: 0;
+    right: 13rem;
+    color: white;
+    padding: 0.3rem;
+    border-radius: 6px;
+    background-color: lightcoral;
+}
+
+.SearchPanel > input {
+    width: 75%; 
+    padding: 0.3rem;
+    border: 0px;
+    font-size: 1.1rem;
+}
+
+.SearchPanel > div {
+    width: 20%;
+    display: flex;
+    padding: 0.2rem;
+    border: 1px solid gray;
+    border-radius: 6px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.SearchPanel > div:hover {
+    background-color: lightgray;
+}
+
+.ToTop {
+    display: none;
+    position: fixed;
+    background-color:  rgb(164, 191, 235);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.ToTop > img {
+    display: block;
+    height: auto;
+    margin: auto;
+}
+
+@media (min-width: 368px) {
+    .SearchPanel {
+        width: 90%;
+    }
+
+    .ToTop {
+        width: 4rem;
+        padding: 1rem;
+        right: 0.5rem;
+        bottom: 1rem;
+        background-color:  rgb(164, 191, 235);
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .ToTop > img {
+        width: 80%;
+    }
+    
+}
+
+@media (min-width: 768px) {
+    .SearchPanel {
+        width: 50%;
+    }
+
+    .PostWrapper {
+        flex-basis: 33%;
+    }
+
+    .PostsContent {
+        padding: 0.5rem; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* .SearchPanel {
+        width: 50%;
+    } */
+
+    .PostWrapper {
+        flex-basis: 20%;
+    }
+
+    /* .PostsContent {
+        padding: 0.5rem; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    } */
+}

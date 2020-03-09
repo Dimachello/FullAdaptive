@@ -1,0 +1,108 @@
+.PostContent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 90%;
+    padding: 0.5rem;
+    color: white;
+    box-shadow: 2px 3px 10px 2px #360033;
+    border-radius: 6px;
+    font-family: 'Roboto';
+    overflow: hidden;
+}
+
+.Number {
+    width: 10%;
+    padding: 0.2rem;
+    height: auto;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 1rem;
+    left: 1rem;
+    font-size: 1.4rem;
+    border: 0px transparent;
+    border-radius: 50%;
+    background-color: rgb(164, 191, 235);
+    opacity: 0.8;
+}
+
+.PostPhoto {
+    display: block;
+    width: 100%;
+}
+
+.PostTitle {
+    text-transform: capitalize;
+    margin: 1rem 0rem;
+    font-family: 'Kosugi';
+}
+
+.DeleteLikedPost {
+    display: none;
+}
+
+.ToolsWrapper {
+    position: relative;
+    width: 8%;
+    min-height: 35rem;
+}
+
+.PostMenuWrapper {
+    padding: 0.5rem 0rem;
+    margin-bottom: 0.3rem;
+    background-color: rgb(164, 191, 235);
+    border-radius: 6px;
+}
+
+.PostMenuWrapper > img {
+    display: block;
+    margin: auto;
+    width: 80%;
+}
+
+.Tools {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0rem;
+    border-radius: 6px;
+    background-color: rgb(164, 191, 235);
+}
+
+.ToolBin {
+    display: block;
+    width: 80%;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.ToolHeart {
+    display: block;
+    width: 80%;
+    cursor: pointer;
+}
+
+
+@media(min-width: 368px) {
+    .PostContent {
+        margin-bottom: 1rem;
+        box-shadow: 4px -3px 10px 2px #360033;
+    }
+}
+
+@media(min-width: 768px){
+    .PostContent {
+        margin-bottom: 3rem;
+        box-shadow: 2px 3px 10px 2px #360033;
+        min-height: 33rem;
+    }
+
+    .Number {
+        width: 15%;
+    }
+}

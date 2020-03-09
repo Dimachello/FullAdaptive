@@ -1,0 +1,84 @@
+@media (min-width: 320px){
+
+    .HeaderWrapper {
+        padding: 1rem 0.1rem;
+        background-image: linear-gradient(to right,  #4568dc, #b06ab3 );
+    }
+    
+    .HeaderContent {
+        min-height: inherit;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: rgb(245, 243, 242);
+        font-size: 0.8rem;
+        font-family: 'Bree Serif', serif;
+    }
+
+    .MenuWrapper {
+        width: 20%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .Menu {
+        width: 40%;
+    }
+    
+}
+
+@media (min-width: 768px){
+
+    .HeaderWrapper {
+        padding: 0rem;
+        min-height: 5.5rem;
+    }
+
+    .HeaderContent {
+        font-size: 1rem;
+    }
+
+    .MenuWrapper {
+        width: 20%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 1rem;
+        
+    }
+
+    .Menu {
+        width: 20%;
+        height: auto;
+    }
+            
+}
+
+@media (min-width: 1024px){
+
+    .HeaderContent {
+        font-size: 1.1rem;
+    }
+            
+}
+
+@media (min-width: 1200px){
+
+.HeaderContent {
+    font-size: 1.5rem;
+}
+
+.MenuWrapper {
+    width: 15%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Menu {
+    width: 15%;
+    height: auto;
+}
+
+}
