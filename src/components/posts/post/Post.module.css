@@ -45,6 +45,10 @@
     display: none;
 }
 
+.ReturnDeletedPost {
+    display: none;
+}
+
 .ToolsWrapper {
     position: relative;
     width: 8%;
