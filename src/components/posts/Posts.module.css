@@ -30,7 +30,7 @@
     color: black;
 }
 
-.SearchError {
+/* .SearchError {
     width: 8rem;
     position: absolute;
     top: 0;
@@ -39,7 +39,7 @@
     padding: 0.3rem;
     border-radius: 6px;
     background-color: lightcoral;
-}
+} */
 
 .SearchPanel > input {
     width: 75%; 
@@ -83,6 +83,18 @@
         width: 90%;
     }
 
+    .SearchError {
+        width: 8rem;
+        position: absolute;
+        top: 3.5rem;
+        right: 0rem;
+        color: white;
+        padding: 0.3rem;
+        border-radius: 6px;
+        background-color: lightcoral;
+        z-index: 300;
+    }
+
     .ToTop {
         width: 4rem;
         padding: 1rem;
@@ -102,6 +114,12 @@
 @media (min-width: 768px) {
     .SearchPanel {
         width: 50%;
+    }
+
+    .SearchError {
+        width: 10rem;
+        top: 0rem;
+        left: 3rem;
     }
 
     .PostWrapper {

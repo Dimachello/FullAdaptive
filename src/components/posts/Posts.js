@@ -24,7 +24,6 @@ class Posts extends React.Component {
 
   componentDidMount() {
     this.props.onFetchPosts();
-    // this.createRefs();
     window.addEventListener("scroll", this.toggleScrollBtn);
     window.scrollTo({
       top: this.props.scrollPosition,
@@ -132,8 +131,10 @@ class Posts extends React.Component {
               onChange={event => this.inputHandler(event)}
             />
             <div
-              onClick={() =>
+              onClick={() => {
                 this.scrollToPost(refs, this.state.input)
+                this.setState({input: ''})
+              }
               }
             >
               <span>Find</span>
