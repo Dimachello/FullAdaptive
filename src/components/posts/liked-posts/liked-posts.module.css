@@ -1,4 +1,5 @@
 .LikedPostsWrapper {
+    min-height: 100vh;
     padding-top: 2rem;
     background-image: linear-gradient(#360033, #0b8793 );
 }
@@ -72,7 +73,7 @@
     margin-top: 1rem;
     width: 100%;
     padding: 1rem 0rem;
-    background-color: maroon;
+    background-color: rgb(245, 53, 0);
     border-radius: 6px;
     cursor: pointer;
 }
@@ -83,8 +84,12 @@
     margin: auto;
 }
 
+.ReturnDeletedPost {
+    display: none;
+}
 
-@media(min-width: 368px) {
+
+@media(min-width: 320px) {
     .Categories {
         width: 80%;
         margin: auto;

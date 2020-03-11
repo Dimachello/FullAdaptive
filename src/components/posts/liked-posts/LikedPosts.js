@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./liked-posts.module.css";
+import classesDeleted from './deleted-posts.module.css';
 import Post from "../post";
 import { connect } from "react-redux";
 
@@ -85,7 +86,7 @@ class LikedPosts extends React.Component {
                 url={post.url}
                 title={post.title}
                 text={post.body}
-                class={classes}
+                class={classesDeleted}
               />
             </div>
           );

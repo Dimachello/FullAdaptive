@@ -1,32 +1,28 @@
 import React from "react";
-// import classes from "./Post.module.css";
 import { Link } from "react-router-dom";
 import * as actions from "../../../store/actions";
 import { connect } from "react-redux";
-// import PostAux from './PostAux';
 import bin from "../../../imgs/post/bin64.png";
+import return64 from "../../../imgs/posts/return64.png";
 import heart from "../../../imgs/post/heart64.png";
 import menu from "../../../imgs/post/menu.png";
 
 class Post extends React.Component {
-
   state = {
     showTools: false
-  }
+  };
 
   toggelTools = () => {
     this.setState(prevState => {
-      return ({
+      return {
         showTools: !prevState.showTools
-      })
-    })
-  }
+      };
+    });
+  };
 
   render() {
-    // const { propsClasses }= this.props.class;
     return (
-        // <React.Fragment>
-        <div className={this.props.class.ItemPostWrapper}>
+      <div className={this.props.class.ItemPostWrapper}>
         <div className={this.props.class.PostContent}>
           <Link to={this.props.path}>
             <img
@@ -38,29 +34,48 @@ class Post extends React.Component {
           </Link>
           <h3 className={this.props.class.PostTitle}>{this.props.title}</h3>
           <p>{this.props.text}</p>
-        <div className={this.props.class.Number}><span>{this.props.id}</span></div>
-        <div className={this.props.class.DeleteLikedPost} onClick={() => {
-          this.props.fetchDelete(this.props.id)
-        }}>
+          <div className={this.props.class.Number}>
+            <span>{this.props.id}</span>
+          </div>
+          <div
+            className={this.props.class.DeleteLikedPost}
+            onClick={() => {
+              this.props.fetchDelete(this.props.id);
+            }}
+          >
             <img src={bin} alt="bin" />
+          </div>
+          <div
+            className={this.props.class.ReturnDeletedPost}
+            // onClick={() => {
+            //   this.props.fetchReturn(this.props.id);
+            // }}
+          >
+            <img src={return64} alt="bin" />
+          </div>
         </div>
-        </div>
-        {/* <div className={this.props.class.DeleteLikedPost}>
-            <img src={bin} alt="bin" />
-        </div> */}
         <div className={this.props.class.ToolsWrapper}>
-          <div className={this.props.class.PostMenuWrapper} onClick={this.toggelTools}>
+          <div
+            className={this.props.class.PostMenuWrapper}
+            onClick={this.toggelTools}
+          >
             <img src={menu} alt="post menu" />
           </div>
-          {this.state.showTools ? 
-          <div className={this.props.class.Tools}>
-            <img className={this.props.class.ToolBin} src={bin} alt="delete" />
-            <img className={this.props.class.ToolHeart} src={heart} alt="like"  onClick={() => this.props.fetchLike(this.props.id)}/>
-          </div> : null
-          }
+          {this.state.showTools ? (
+            <div className={this.props.class.Tools}>
+              {/* <img className={this.props.class.ToolBin} src={bin} alt="delete" /> */}
+              <img
+                className={this.props.class.ToolHeart}
+                src={heart}
+                alt="like"
+                onClick={() => {this.props.fetchLike(this.props.id);
+                  this.toggelTools()
+                }}
+              />
+            </div>
+          ) : null}
         </div>
-        </div>
-        /* </React.Fragment> */
+      </div>
     );
   }
 }

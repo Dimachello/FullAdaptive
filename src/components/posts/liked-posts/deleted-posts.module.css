@@ -1,0 +1,53 @@
+.PostContent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    color: white;
+    box-shadow: 2px 3px 10px 2px #360033;
+    border-radius: 6px;
+    font-family: 'Roboto';
+    overflow: hidden;
+}
+
+.Number {
+    display: none;
+}
+
+.PostPhoto {
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+.PostTitle {
+    text-transform: capitalize;
+    margin: 1rem 0rem;
+    font-family: 'Kosugi';
+}
+
+.ToolsWrapper {
+    display: none;
+}
+
+.DeleteLikedPost {
+    display: none;
+}
+
+.ReturnDeletedPost {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 1rem 0rem;
+    background-color: rgb(39, 111, 245);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.ReturnDeletedPost > img {
+    display: block;
+    width: 6%;
+    margin: auto;
+}
+
