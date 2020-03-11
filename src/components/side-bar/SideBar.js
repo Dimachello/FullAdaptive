@@ -20,7 +20,7 @@ const SideBar = (props) => {
     return (
         props.isShown ? 
              <React.Fragment>
-                 <div className={styles.join(' ')}>
+                <div className={styles.join(' ')}>
                 <img src={LogoPicture} className={classes.LogoPicture} alt="logo" />
                  <List class={classes.SideBarNavList}>
                     {NavItemsList.map((item,idx) => {

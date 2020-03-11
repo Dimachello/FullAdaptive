@@ -10,11 +10,10 @@
 @media (min-width: 320px) {
 
     .SideBar {
-        /* text-decoration: none; */
         position: fixed;
         top: 0;
         left: 0;
-        width: 13rem;
+        width: 12rem;
         min-height: 100vh;
         z-index: 200;
         display: flex;
@@ -23,6 +22,8 @@
         align-items: center;
         background-color: rgb(171, 158, 157);
         padding-top: 0.4rem; 
+        border-radius: 6px;
+        box-shadow: 2px 3px 10px 2px #360033;
     }
 
     .SideBarNavList {
@@ -30,11 +31,10 @@
         list-style: none;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
+        justify-content: flex-start;
         color: rgb(245, 243, 242);
         line-height: 4rem;
-        /* text-decoration: none; */
         font-size: 1rem;
     }
 
@@ -55,7 +55,7 @@
     }
 
     .LogoPicture {
-        width: 90%;
+        width: 60%;
     }
     
 }

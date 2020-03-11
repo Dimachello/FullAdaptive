@@ -51,6 +51,7 @@
     padding: 0.5rem;
     background-color: rgb(164, 191, 235);
     border-radius: 6px;
+    cursor: pointer;
 }
 
 .Cross {
@@ -91,24 +92,19 @@
 .Relevant {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: space-around;
     width: 100%;
-    padding: 1rem;
     box-shadow: 2px 3px 10px 2px #360033;
     border-radius: 6px;
 }
 
 .Relevant > img {
-      flex-basis: 20%;
+    flex-basis: 45%;
     display: block;
-    margin: 0rem 1rem 0.5rem 0rem;
     border-radius: 6px;
     cursor: pointer;
     transition: transform .2s;
-}
-
-.Relevant > img:nth-last-child(-n + 4) {
-    margin: 0rem 1rem 0rem 0rem;
 }
 
 .Relevant > img:hover {
@@ -139,16 +135,13 @@
     .PostCommentsWrapper {
         width: 40%;
     }
+
+    .Relevant > img {
+        flex-basis: 30%;
+    }
 }
 
 @media(min-width: 1200px) {
-    /* .SinglePostWrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 5rem 1rem 1rem 1rem;
-    } */
 
     .Combine {
         display: flex;
@@ -159,7 +152,6 @@
     .SinglePostContent {
         width: 40%; 
         min-height: 100vh;
-        /* margin-bottom: 0rem; */
     }
 
     .PostCommentsWrapper {

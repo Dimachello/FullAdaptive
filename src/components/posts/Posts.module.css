@@ -78,7 +78,7 @@
     margin: auto;
 }
 
-@media (min-width: 368px) {
+@media (min-width: 320px) {
     .SearchPanel {
         width: 90%;
     }
