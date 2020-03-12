@@ -3,5 +3,7 @@ export {
   fetchLikedPost,
   fetchDeletedPost,
   getSinglePost,
-  getScrollPosition
+  getScrollPosition,
+  removeLikedPost,
+  returnLikedPosts
 } from "./posts";

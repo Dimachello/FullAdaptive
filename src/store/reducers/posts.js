@@ -41,6 +41,17 @@ const reducer = (state = initialState, action) => {
         ...state,
         scrollPosition: action.position
       };
+    case "REMOVE_LIKED_POST":
+      return {
+        ...state,
+        likedPosts: action.likedPosts
+      }
+    case "RETURN_LIKED_POST":
+      return {
+        ...state,
+        deletedPosts: action.deletedPosts,
+        likedPosts: action.likedPosts
+      }
     default:
       return state;
   }

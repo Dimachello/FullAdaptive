@@ -65,6 +65,7 @@ class LikedPosts extends React.Component {
         !this.state.showDeleted ? 
         this.props.likedPosts.map(postId => {
           const post = this.props.posts[postId];
+          // console.log(post.id)
           return (
             <div className={classes.LikedPostWrapper} ref={this.LikedPosts} key={postId}>
               <Post

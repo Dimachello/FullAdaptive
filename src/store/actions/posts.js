@@ -71,3 +71,50 @@ export const fetchDeletedPost = ( postId ) => {
     deletedPostId: postId - 1
   }
 }
+
+export const removeLikedPost = ( array,index ) => {
+
+  // const id = index - 1;
+  const id = array.indexOf(index - 1);
+  // console.log(id)
+  let likedPosts = null;
+  if(array.length === 1) {
+    likedPosts = [];
+  } else {
+    likedPosts = [...array.slice(0,id), ...array.slice(id+1)];
+  }
+  
+  return {
+    type: "REMOVE_LIKED_POST",
+    likedPosts: likedPosts
+  }
+
+}
+
+export const returnLikedPosts = (arrayDeleted,arrayLiked,index) => {
+
+  const id = arrayDeleted.indexOf(index - 1);
+  let deletedPosts = null;
+  let likedPosts = [...arrayLiked];
+  if(arrayDeleted.length === 1) {
+    deletedPosts = [];
+    likedPosts.push(index-1);
+    likedPosts.reverse();
+  } else {
+    deletedPosts = [...arrayDeleted.filter((item,num) => num !== id)];
+    likedPosts.push(index-1);
+    likedPosts.reverse();
+  }
+
+  // if(likedPosts.length === 0) {
+  //   likedPosts.push(index-1);
+  // } else {
+    // likedPosts.push(index-1).reverse();
+  // }
+
+  return {
+    type: "RETURN_LIKED_POST",
+    deletedPosts: deletedPosts,
+    likedPosts: likedPosts
+  }
+}

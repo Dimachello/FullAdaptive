@@ -41,15 +41,17 @@ class Post extends React.Component {
             className={this.props.class.DeleteLikedPost}
             onClick={() => {
               this.props.fetchDelete(this.props.id);
+              this.props.removeLikedPost(this.props.likedPosts, this.props.id);
             }}
           >
             <img src={bin} alt="bin" />
           </div>
           <div
             className={this.props.class.ReturnDeletedPost}
-            // onClick={() => {
-            //   this.props.fetchReturn(this.props.id);
-            // }}
+            onClick={() => {
+              this.props.returnLikedPost(this.props.deletedPosts,this.props.likedPosts,this.props.id);
+              // console.log(this.props.id)
+            }}
           >
             <img src={return64} alt="bin" />
           </div>
@@ -80,12 +82,21 @@ class Post extends React.Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    likedPosts: state.posts.likedPosts,
+    deletedPosts: state.posts.deletedPosts
+  };
+};
+
 const mapDispatchToProps = dispatch => {
   return {
     getPost: id => dispatch(actions.getSinglePost(id)),
     fetchLike: id => dispatch(actions.fetchLikedPost(id)),
-    fetchDelete: id => dispatch(actions.fetchDeletedPost(id))
+    fetchDelete: id => dispatch(actions.fetchDeletedPost(id)),
+    removeLikedPost: (array,index) => dispatch(actions.removeLikedPost(array,index)),
+    returnLikedPost: (arrayDeleted,arrayLiked, index) => dispatch(actions.returnLikedPosts(arrayDeleted,arrayLiked,index))
   };
 };
 
-export default connect(null, mapDispatchToProps)(Post);
+export default connect(mapStateToProps, mapDispatchToProps)(Post);

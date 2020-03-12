@@ -108,12 +108,16 @@ class Posts extends React.Component {
 
   render() {
 
+
+
     let ids = [];
 
     this.props.posts.map(post => {
       ids.push(post.id);
       return ids;
     });
+
+    // console.log(ids);
 
     const refs = ids.reduce((acc, value) => {
       acc[value] = React.createRef();

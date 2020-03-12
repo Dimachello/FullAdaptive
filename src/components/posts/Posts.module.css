@@ -5,6 +5,7 @@
 
 .PostWrapper > div {
     display: flex;
+    padding: 0.5rem;
 }
 
 .SearchPanelWrapper {
