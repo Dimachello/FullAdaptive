@@ -5,6 +5,7 @@ import classes from "./PostInfo.module.css";
 import cross from "../../../imgs/post/back.png";
 
 class Post extends React.Component {
+
   render() {
     const id = this.props.id - 1;
     const posts = this.props.posts;
@@ -14,7 +15,7 @@ class Post extends React.Component {
         <div className={classes.Combine}>
           <div className={classes.SinglePostContent}>
             <div className={classes.CrossWrapper}>
-              <Link to="/">
+              <Link to={this.props.path}>
                 <div className={classes.CrossContainer}>
                   <img src={cross} alt="cross" className={classes.Cross} />
                 </div>
@@ -52,10 +53,13 @@ class Post extends React.Component {
   }
 }
 
+
+
 const mapStateToProps = state => {
   return {
     posts: state.posts.posts,
-    id: state.posts.postId
+    id: state.posts.postId,
+    path: state.posts.path
   };
 };
 

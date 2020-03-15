@@ -1,6 +1,7 @@
 const initialState = {
   posts: [],
   postId: null,
+  path: null,
   likedPosts: [],
   deletedPosts: [],
   scrollPosition: null
@@ -17,7 +18,8 @@ const reducer = (state = initialState, action) => {
     case "GET_SINGLE_POST":
       return {
         ...state,
-        postId: action.postId
+        postId: action.postId,
+        path: action.path
       };
 
     case "GET_LIKED_POST":

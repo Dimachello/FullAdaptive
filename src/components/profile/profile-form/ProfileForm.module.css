@@ -1,0 +1,67 @@
+/* .FormWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+.FormWrapper {
+    padding-top: 2rem;
+}
+
+.FormWrapper > h2 {
+    margin-bottom: 2rem;
+    color: white;
+    font-family: 'Kosugi';
+    text-align: center;
+}
+
+.FormWrapper > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.FormWrapper > form > input[type=text],input[type=email] {
+    display: block;
+    width: 100%;
+    border: 3px solid transparent;
+    border-radius: 6px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.FormWrapper > form > input[type=text]:focus {
+    border-color: blue;
+}
+
+/* .FormWrapper > form > input[type=email] {
+    margin-bottom: 3rem;
+} */
+
+.FormWrapper > form > label {
+    margin-bottom: 1rem;
+    color: white;
+    font-family: 'Kosugi';
+    font-size: 1.1rem;
+}
+
+.FormWrapper > form > textarea {
+    width: 100%;
+    padding: 0.3rem;
+    border-radius: 6px;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    font-family: 'Roboto';
+}
+
+.FormWrapper > form > input[type=email]:focus {
+    border-color: blue;
+}
+
+.FormWrapper > form > input[type=submit] {
+    width: 50%;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+}

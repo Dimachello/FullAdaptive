@@ -88,27 +88,7 @@ class Posts extends React.Component {
     });
   };
 
-  // createRefs = () => {
-  //   let ids = [];
-
-  //   this.props.posts.map(post => {
-  //     ids.push(post.id);
-  //     return ids;
-  //   });
-
-  //   const refs = ids.reduce((acc, value) => {
-  //     acc[value] = React.createRef();
-  //     return acc;
-  //   }, {});
-
-  //   this.setState({
-  //     refs: refs
-  //   });
-  // };
-
   render() {
-
-
 
     let ids = [];
 
@@ -116,8 +96,6 @@ class Posts extends React.Component {
       ids.push(post.id);
       return ids;
     });
-
-    // console.log(ids);
 
     const refs = ids.reduce((acc, value) => {
       acc[value] = React.createRef();

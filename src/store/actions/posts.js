@@ -7,10 +7,11 @@ export const fetchPostsSuccess = fetchedPosts => {
   };
 };
 
-export const getSinglePost = id => {
+export const getSinglePost = (id,path) => {
   return {
     type: "GET_SINGLE_POST",
-    postId: id
+    postId: id,
+    path: path
   };
 };
 
@@ -74,9 +75,7 @@ export const fetchDeletedPost = ( postId ) => {
 
 export const removeLikedPost = ( array,index ) => {
 
-  // const id = index - 1;
   const id = array.indexOf(index - 1);
-  // console.log(id)
   let likedPosts = null;
   if(array.length === 1) {
     likedPosts = [];
@@ -105,12 +104,6 @@ export const returnLikedPosts = (arrayDeleted,arrayLiked,index) => {
     likedPosts.push(index-1);
     likedPosts.reverse();
   }
-
-  // if(likedPosts.length === 0) {
-  //   likedPosts.push(index-1);
-  // } else {
-    // likedPosts.push(index-1).reverse();
-  // }
 
   return {
     type: "RETURN_LIKED_POST",

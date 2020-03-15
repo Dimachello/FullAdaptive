@@ -29,7 +29,7 @@ class Post extends React.Component {
               className={this.props.class.PostPhoto}
               src={this.props.url}
               alt="thumb"
-              onClick={() => this.props.getPost(this.props.id)}
+              onClick={() => this.props.getPost(this.props.id, window.location.pathname)}
             />
           </Link>
           <h3 className={this.props.class.PostTitle}>{this.props.title}</h3>
@@ -50,7 +50,6 @@ class Post extends React.Component {
             className={this.props.class.ReturnDeletedPost}
             onClick={() => {
               this.props.returnLikedPost(this.props.deletedPosts,this.props.likedPosts,this.props.id);
-              // console.log(this.props.id)
             }}
           >
             <img src={return64} alt="bin" />
@@ -65,7 +64,6 @@ class Post extends React.Component {
           </div>
           {this.state.showTools ? (
             <div className={this.props.class.Tools}>
-              {/* <img className={this.props.class.ToolBin} src={bin} alt="delete" /> */}
               <img
                 className={this.props.class.ToolHeart}
                 src={heart}
@@ -91,7 +89,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    getPost: id => dispatch(actions.getSinglePost(id)),
+    getPost: (id,path) => dispatch(actions.getSinglePost(id,path)),
     fetchLike: id => dispatch(actions.fetchLikedPost(id)),
     fetchDelete: id => dispatch(actions.fetchDeletedPost(id)),
     removeLikedPost: (array,index) => dispatch(actions.removeLikedPost(array,index)),
