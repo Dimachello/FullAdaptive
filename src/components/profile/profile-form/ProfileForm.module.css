@@ -11,6 +11,7 @@
 .FormWrapper > h2 {
     margin-bottom: 2rem;
     color: white;
+    font-weight: 900;
     font-family: 'Kosugi';
     text-align: center;
 }
@@ -30,6 +31,7 @@
     padding: 0.5rem;
     margin-bottom: 1rem;
     font-size: 1.1rem;
+    box-shadow: 6px 6px 10px 2px #360033;;
 }
 
 .FormWrapper > form > input[type=text]:focus {
@@ -54,6 +56,7 @@
     margin-bottom: 3rem;
     font-size: 1.1rem;
     font-family: 'Roboto';
+    box-shadow: 6px 6px 10px 2px #360033;;
 }
 
 .FormWrapper > form > input[type=email]:focus {

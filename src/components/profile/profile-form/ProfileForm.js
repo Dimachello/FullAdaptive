@@ -57,7 +57,7 @@ class ProfileForm extends React.Component {
             id="text-field"
             onChange={this.handleInputs}
           />
-          <input type="submit" placeholder="Send" />
+          <input type="submit" value="Send" />
         </form>
       </div>
     );

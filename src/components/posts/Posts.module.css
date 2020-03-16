@@ -31,17 +31,6 @@
     color: black;
 }
 
-/* .SearchError {
-    width: 8rem;
-    position: absolute;
-    top: 0;
-    right: 13rem;
-    color: white;
-    padding: 0.3rem;
-    border-radius: 6px;
-    background-color: lightcoral;
-} */
-
 .SearchPanel > input {
     width: 75%; 
     padding: 0.3rem;
@@ -137,19 +126,8 @@
 }
 
 @media (min-width: 1024px) {
-    /* .SearchPanel {
-        width: 50%;
-    } */
 
     .PostWrapper {
         flex-basis: 20%;
     }
-
-    /* .PostsContent {
-        padding: 0.5rem; 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-    } */
 }

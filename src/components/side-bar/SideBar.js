@@ -8,7 +8,7 @@ import LogoPicture from "../../imgs/logo/Logo2.png";
 
 const SideBar = props => {
   const NavItemsList = ["Main", "Profile", "Saved"];
-  const path = ["/", "/profile", "/liked"];
+  const path = ["/", "/profile", "/saved"];
 
   let styles = [classes.SideBar, classes.Close];
 

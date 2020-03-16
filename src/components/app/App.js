@@ -14,7 +14,7 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Posts} />
         <Route path="/post/:id" component={PostInfo} />
-        <Route path="/liked" component={LikedPosts} />
+        <Route path="/saved" component={LikedPosts} />
         <Route path="/profile" component={Profile} />
       </Switch>
     </React.Fragment>
