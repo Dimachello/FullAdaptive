@@ -69,6 +69,13 @@
     display: none;
 }
 
+.BtnWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .DeleteLikedPost {
     margin-top: 1rem;
     width: 100%;
@@ -136,5 +143,19 @@
     .Categories {
         max-width: 60%; 
         margin: 0rem auto 2rem auto;
+    }
+
+    .LikedPostWrapper {
+        flex-basis: 33%;
+    }
+
+    .PostTitle {
+        max-height: 1.2rem;
+        overflow: hidden;
+    }
+
+    .PostParagraph {
+        max-height: 2.5rem;
+        overflow: hidden;
     }
 }

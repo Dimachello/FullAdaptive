@@ -33,10 +33,11 @@ class Post extends React.Component {
             />
           </Link>
           <h3 className={this.props.class.PostTitle}>{this.props.title}</h3>
-          <p>{this.props.text}</p>
+          <p className={this.props.class.PostParagraph}>{this.props.text}</p>
           <div className={this.props.class.Number}>
             <span>{this.props.id}</span>
           </div>
+          <div className={this.props.class.BtnWrapper}>
           <div
             className={this.props.class.DeleteLikedPost}
             onClick={() => {
@@ -53,6 +54,7 @@ class Post extends React.Component {
             }}
           >
             <img src={return64} alt="bin" />
+          </div>
           </div>
         </div>
         <div className={this.props.class.ToolsWrapper}>

@@ -95,14 +95,13 @@ export const returnLikedPosts = (arrayDeleted,arrayLiked,index) => {
   const id = arrayDeleted.indexOf(index - 1);
   let deletedPosts = null;
   let likedPosts = [...arrayLiked];
-  if(arrayDeleted.length === 1) {
+  if(arrayDeleted.length === 1 && (likedPosts.length === 0 || likedPosts.length === 1)) {
     deletedPosts = [];
     likedPosts.push(index-1);
     likedPosts.reverse();
   } else {
     deletedPosts = [...arrayDeleted.filter((item,num) => num !== id)];
-    likedPosts.push(index-1);
-    likedPosts.reverse();
+    likedPosts = [(index-1),...likedPosts];
   }
 
   return {

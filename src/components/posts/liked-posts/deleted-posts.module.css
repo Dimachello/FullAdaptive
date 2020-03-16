@@ -32,13 +32,34 @@
     display: none;
 }
 
+.BtnWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .DeleteLikedPost {
-    display: none;
+    /* display: none; */
+    margin-top: 1rem;
+    /* width: 100%; */
+    padding: 1rem 0rem;
+    background-color: rgb(245, 53, 0);
+    border-radius: 6px;
+    cursor: pointer;
+    flex-basis: 45%;
+}
+
+.DeleteLikedPost > img {
+    display: block;
+    width: 10%;
+    margin: auto;
 }
 
 .ReturnDeletedPost {
     margin-top: 1rem;
-    width: 100%;
+    flex-basis: 45%;
+    /* width: 100%; */
     padding: 1rem 0rem;
     background-color: rgb(39, 111, 245);
     border-radius: 6px;
@@ -47,7 +68,24 @@
 
 .ReturnDeletedPost > img {
     display: block;
-    width: 6%;
+    width: 10%;
     margin: auto;
 }
 
+/* @media(min-width: 320px) {
+
+} */
+
+
+@media(min-width: 1200px) {
+
+    .PostTitle {
+        max-height: 1.2rem;
+        overflow: hidden;
+    }
+
+    .PostParagraph {
+        max-height: 2.5rem;
+        overflow: hidden;
+    }
+}

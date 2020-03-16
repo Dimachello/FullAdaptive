@@ -25,10 +25,24 @@ const reducer = (state = initialState, action) => {
     case "GET_LIKED_POST":
       const likedPost = action.likedPostId;
 
-      return {
-        ...state,
-        likedPosts: state.likedPosts.concat(likedPost)
-      };
+      let check;
+
+      for (let key in state.likedPosts) {
+        if (state.likedPosts[key] === likedPost) {
+          check = true;
+        }
+      }
+
+      if (check) {
+        return {
+          ...state
+        };
+      } else {
+        return {
+          ...state,
+          likedPosts: state.likedPosts.concat(likedPost)
+        };
+      }
 
     case "GET_DELETED_POST":
       const deletedPost = action.deletedPostId;
@@ -36,7 +50,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         deletedPosts: state.deletedPosts.concat(deletedPost)
-      }
+      };
 
     case "GET_SCROLL_POSITION":
       return {
@@ -47,13 +61,13 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         likedPosts: action.likedPosts
-      }
+      };
     case "RETURN_LIKED_POST":
       return {
         ...state,
         deletedPosts: action.deletedPosts,
         likedPosts: action.likedPosts
-      }
+      };
     default:
       return state;
   }
