@@ -1,0 +1,26 @@
+.ErrorWrapper {
+    padding-top: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(#360033, #0b8793);
+}
+
+.ErrorWrapper > h1,span,h2 {
+    color: white;
+    text-align: center;
+}
+
+.ErrorWrapper > span {
+    font-size: 3rem;
+}
+
+.ErrorWrapper > h1 {
+    margin-bottom: 1rem;
+}
+
+.ErrorWrapper > h2 > a {
+    color: black;
+}

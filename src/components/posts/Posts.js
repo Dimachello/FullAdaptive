@@ -108,7 +108,7 @@ class Posts extends React.Component {
           <div className={classes.SearchPanel}>
             <input
               type="text"
-              placeholder="Enter post id"
+              placeholder={`Enter post id 1 to ${this.props.posts.length}`}
               value={this.state.input}
               onChange={event => this.inputHandler(event)}
             />
@@ -119,11 +119,12 @@ class Posts extends React.Component {
               }
               }
             >
-              <span>Find</span>
+              Find
             </div>
           </div>
           {this.state.isError ? (
             <SearchError
+              amount={this.props.posts.length}
               class={classes.SearchError}
               expire={this.toggleError}
             />

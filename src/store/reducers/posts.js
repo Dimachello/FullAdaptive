@@ -62,6 +62,11 @@ const reducer = (state = initialState, action) => {
         ...state,
         likedPosts: action.likedPosts
       };
+    case "REMOVE_DELETED_POST":
+      return {
+        ...state,
+        deletedPosts: action.deletedPosts
+      }
     case "RETURN_LIKED_POST":
       return {
         ...state,

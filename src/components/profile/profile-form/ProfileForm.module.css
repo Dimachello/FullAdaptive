@@ -1,9 +1,3 @@
-/* .FormWrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */
 .FormWrapper {
     padding-top: 2rem;
 }
@@ -37,10 +31,6 @@
 .FormWrapper > form > input[type=text]:focus {
     border-color: blue;
 }
-
-/* .FormWrapper > form > input[type=email] {
-    margin-bottom: 3rem;
-} */
 
 .FormWrapper > form > label {
     margin-bottom: 1rem;

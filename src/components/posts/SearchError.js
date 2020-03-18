@@ -18,7 +18,7 @@ componentDidMount () {
 render () {
   return (
     <div className={this.props.class} ref={this.SearchErrorModal}>
-      <span>Enter number in range from 1 to 15</span>
+      <span>Enter number in range from 1 to {this.props.amount}</span>
     </div>
   );
 };

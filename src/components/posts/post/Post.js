@@ -29,7 +29,9 @@ class Post extends React.Component {
               className={this.props.class.PostPhoto}
               src={this.props.url}
               alt="thumb"
-              onClick={() => this.props.getPost(this.props.id, window.location.pathname)}
+              onClick={() =>
+                this.props.getPost(this.props.id, window.location.pathname)
+              }
             />
           </Link>
           <h3 className={this.props.class.PostTitle}>{this.props.title}</h3>
@@ -38,23 +40,37 @@ class Post extends React.Component {
             <span>{this.props.id}</span>
           </div>
           <div className={this.props.class.BtnWrapper}>
-          <div
-            className={this.props.class.DeleteLikedPost}
-            onClick={() => {
-              this.props.fetchDelete(this.props.id);
-              this.props.removeLikedPost(this.props.likedPosts, this.props.id);
-            }}
-          >
-            <img src={bin} alt="bin" />
-          </div>
-          <div
-            className={this.props.class.ReturnDeletedPost}
-            onClick={() => {
-              this.props.returnLikedPost(this.props.deletedPosts,this.props.likedPosts,this.props.id);
-            }}
-          >
-            <img src={return64} alt="bin" />
-          </div>
+            <div
+              className={this.props.class.DeleteLikedPost}
+              onClick={() => {
+                if (this.props.handlersAmount === 2) {
+                  this.props.fetchDelete(this.props.id);
+                  this.props.removeLikedPost(
+                    this.props.likedPosts,
+                    this.props.id
+                  );
+                } else if (this.props.handlersAmount === 1) {
+                  this.props.removeDeletedPost(
+                    this.props.deletedPosts,
+                    this.props.id
+                  );
+                }
+              }}
+            >
+              <img src={bin} alt="bin" />
+            </div>
+            <div
+              className={this.props.class.ReturnDeletedPost}
+              onClick={() => {
+                this.props.returnLikedPost(
+                  this.props.deletedPosts,
+                  this.props.likedPosts,
+                  this.props.id
+                );
+              }}
+            >
+              <img src={return64} alt="bin" />
+            </div>
           </div>
         </div>
         <div className={this.props.class.ToolsWrapper}>
@@ -70,8 +86,9 @@ class Post extends React.Component {
                 className={this.props.class.ToolHeart}
                 src={heart}
                 alt="like"
-                onClick={() => {this.props.fetchLike(this.props.id);
-                  this.toggelTools()
+                onClick={() => {
+                  this.props.fetchLike(this.props.id);
+                  this.toggelTools();
                 }}
               />
             </div>
@@ -82,7 +99,7 @@ class Post extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     likedPosts: state.posts.likedPosts,
     deletedPosts: state.posts.deletedPosts
@@ -91,11 +108,15 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    getPost: (id,path) => dispatch(actions.getSinglePost(id,path)),
+    getPost: (id, path) => dispatch(actions.getSinglePost(id, path)),
     fetchLike: id => dispatch(actions.fetchLikedPost(id)),
     fetchDelete: id => dispatch(actions.fetchDeletedPost(id)),
-    removeLikedPost: (array,index) => dispatch(actions.removeLikedPost(array,index)),
-    returnLikedPost: (arrayDeleted,arrayLiked, index) => dispatch(actions.returnLikedPosts(arrayDeleted,arrayLiked,index))
+    removeLikedPost: (array, index) =>
+      dispatch(actions.removeLikedPost(array, index)),
+    removeDeletedPost: (array, index) =>
+      dispatch(actions.removeDeletedPost(array, index)),
+    returnLikedPost: (arrayDeleted, arrayLiked, index) =>
+      dispatch(actions.returnLikedPosts(arrayDeleted, arrayLiked, index))
   };
 };
 

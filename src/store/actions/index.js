@@ -5,5 +5,6 @@ export {
   getSinglePost,
   getScrollPosition,
   removeLikedPost,
+  removeDeletedPost,
   returnLikedPosts
 } from "./posts";

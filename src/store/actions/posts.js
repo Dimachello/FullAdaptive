@@ -88,6 +88,21 @@ export const removeLikedPost = (array, index) => {
   };
 };
 
+export const removeDeletedPost = (array, index) => {
+  const id = array.indexOf(index - 1);
+  let deletedPosts = [];
+  if (array.length === 1) {
+    deletedPosts = [];
+  } else {
+    deletedPosts = [...array.slice(0, id), ...array.slice(id + 1)];
+  }
+
+  return {
+    type: "REMOVE_DELETED_POST",
+    deletedPosts: deletedPosts
+  };
+};
+
 export const returnLikedPosts = (arrayDeleted, arrayLiked, index) => {
   const id = arrayDeleted.indexOf(index - 1);
   let deletedPosts = null;

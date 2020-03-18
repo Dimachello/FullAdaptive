@@ -4,6 +4,13 @@
     background-image: linear-gradient(#360033, #0b8793 );
 }
 
+.LikedPostsContent > h3 {
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    font-family: 'Kosugi';
+}
+
 .Categories {
     display: flex;
     justify-content: space-between;
@@ -99,13 +106,12 @@
 @media(min-width: 320px) {
     .Categories {
         width: 80%;
-        margin: auto;
+        margin: 0rem auto 1rem auto;
     }
 
     .LikedPostWrapper {
         display: flex;
         justify-content: center;
-        align-items: flex-start;
         padding: 1rem 0.5rem;
     }
 }
